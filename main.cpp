@@ -1,5 +1,6 @@
 #include <iostream>
 #include "set.h"
+#include "set.cpp"
 
 int main(int argc, char* argv[]) 
 {
@@ -12,17 +13,17 @@ int main(int argc, char* argv[])
 	for(int i = 0; i < 6; i++) {
 		temp.push_back(i);
 	}
-	Set a(temp);
+	Set<int> a(temp);
 	temp.erase(temp.begin(), temp.end());
 
 	for(int i = 3; i < 8; i++) {
 		temp.push_back(i);
 	}
-	Set b(temp);
+	Set<int> b(temp);
 	temp.erase(temp.begin(), temp.end());
 
-	Set c = a+b;
-	Set d = a*b;
+	Set<int> c = a+b;
+	Set<int> d = a*b;
 	
 	std::cout << "{A}= ";
 	a.print_items();

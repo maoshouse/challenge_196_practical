@@ -3,14 +3,14 @@
 #include <vector>
 #include <typeinfo>
 #include <iostream>
-#include <string>
 #include <sstream>
 
+template <class T>
 class Set {
 public:
-	Set(std::vector<int> input);
+	Set(std::vector<T> input);
 	~Set();
-	std::vector<int> items() const;
+	std::vector<T> items() const;
 	bool contains(int val);
 	void print_items();
 	Set operator+(const Set& s);
@@ -18,7 +18,7 @@ public:
 	bool operator==(const Set&s);
 
 private:
-	std::vector<int> pItems;
+	std::vector<T> pItems;
 	int size;
 };
 
